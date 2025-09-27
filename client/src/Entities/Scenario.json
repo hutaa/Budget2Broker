@@ -1,0 +1,61 @@
+{
+  "name": "Scenario",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the scenario"
+    },
+    "principal": {
+      "type": "number",
+      "description": "Loan principal amount"
+    },
+    "apr_annual": {
+      "type": "number",
+      "description": "Annual percentage rate"
+    },
+    "term_months": {
+      "type": "integer",
+      "description": "Loan term in months"
+    },
+    "min_payment": {
+      "type": "number",
+      "description": "Minimum monthly payment"
+    },
+    "extra_payment": {
+      "type": "number",
+      "description": "Extra monthly payment available"
+    },
+    "expected_return_annual": {
+      "type": "number",
+      "description": "Expected annual investment return"
+    },
+    "volatility_annual": {
+      "type": "number",
+      "description": "Investment volatility"
+    },
+    "tax_mode": {
+      "type": "string",
+      "enum": [
+        "taxable",
+        "tax_advantaged"
+      ],
+      "description": "Tax treatment of investments"
+    },
+    "horizon_years": {
+      "type": "integer",
+      "description": "Investment horizon in years"
+    },
+    "results": {
+      "type": "object",
+      "description": "Calculated results and recommendations"
+    }
+  },
+  "required": [
+    "name",
+    "principal",
+    "apr_annual",
+    "term_months",
+    "min_payment"
+  ]
+}
